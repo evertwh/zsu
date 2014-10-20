@@ -1,0 +1,354 @@
+//
+//  Rev:          $Id: test_StringUtils.cpp,v 1.1 2004/11/25 11:07:55 evert Exp $
+//
+//  Author:       Evert Haasdijk
+//  Contact:      evert@zukkespijkers.nl
+//
+//  copyright (c) 2003 - 2004 Zukke Spijkers BV
+//
+//  This file is part of the Zukke Spijkers Utilities Library.
+//
+//  The Zukke Spijkers Utilities Library is free software; you can redistribute
+//  it and/or modify it under the terms of the GNU General Public License as
+//  published by the Free Software Foundation; either version 2 of the License,
+//  or (at your option) any later version.
+//
+//  The Zukke Spijkers Utilities Library is distributed in the hope that it
+//  will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty
+//  of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//  GNU General Public License for more details.
+//
+//  You should have received a copy of the GNU General Public License
+//  along with the Zukke Spijkers Utilities Library; if not, write to the Free
+//  Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+//  MA  02111-1307  USA
+//
+//---------------------------------------------------------------------------
+
+#include <iostream>
+#include <sstream>
+#include <exception>
+
+#include <zsu/StringUtils.h>
+#include <boost/test/unit_test.hpp>
+
+using namespace boost::unit_test_framework;
+using namespace std;
+
+//---------------------------------------------------------------------------
+void testStringUtils(void)
+{
+  string one = "tab:\t newline:\n carriage return:\r quote:\" backslash: \\ ";
+  string escaped = zsu::escape(one);
+  BOOST_CHECK(escaped == "tab:\\t newline:\\n carriage return:\\r quote:\\\" backslash: \\\\ ");
+  BOOST_CHECK(one == zsu::unEscape(escaped));
+
+  string quoted = zsu::quote(escaped);
+  BOOST_CHECK(quoted == "\"tab:\\t newline:\\n carriage return:\\r quote:\\\" backslash: \\\\ \"");
+  BOOST_CHECK(escaped == zsu::unQuote(quoted));
+
+  istringstream qStr(quoted);
+  string yas;
+  zsu::readQuoted(yas, qStr);
+  BOOST_CHECK(escaped == yas);
+
+  quoted += "  \t\n";
+  istringstream foo(quoted);
+  zsu::readString(yas, foo);
+  BOOST_CHECK(one == yas);   
+}  
+//---------------------------------------------------------------------------
+
+void testStripFunction(void)
+{
+  string initial = string("Boog, F. van der");
+  string expected = string("Boog, F. van der");
+  string got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("    Boog, F. van der");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("Boog, F. van der    ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("   Boog, F. van der    ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"Boog, F. van der\"");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"    Boog, F. van der\"");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"Boog, F. van der    \"");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"   Boog, F. van der    \"");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("   \"    Boog, F. van der\"");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"Boog, F. van der    \"   ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("  \"   Boog, F. van der    \"    ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  // some special cases!
+  initial = string("");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("  ");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"\"");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\" \"");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"");
+  expected = string("\"");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"\"\"");
+  expected = string("\"");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("a");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" a");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("a ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" a ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"a\"");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" \"a\"");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"a\" ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" \"a\" ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\" a\"");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\"a \"");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("\" a \"");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" \" a \" ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  // tests when the quote character is <'>
+  initial = string("'Boog, F. van der'");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'    Boog, F. van der'");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'Boog, F. van der    '");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'   Boog, F. van der    '");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("   '    Boog, F. van der'");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'Boog, F. van der    '   ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("  '   Boog, F. van der    '    ");
+  expected = string("Boog, F. van der");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'a'");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" 'a'");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'a' ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" 'a' ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("' a'");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'a '");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("' a '");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string(" ' a ' ");
+  expected = string("a");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("''");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("' '");
+  expected = string("");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'");
+  expected = string("'");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+
+  initial = string("'''");
+  expected = string("'");
+  got = zsu::strip(initial);
+  BOOST_CHECK(expected == got);
+}
+
+//---------------------------------------------------------------------------
+
+void testKeyValue(void)
+{
+  char two[] = "key=123 key={1 2 3}";
+  istringstream test(two);
+
+  string key = "key";
+  string entry;
+  vector<string> entries;
+
+  BOOST_CHECK(zsu::readEntry(key, entry, test));
+  BOOST_CHECK(entry == "123");
+
+  BOOST_CHECK(zsu::readEntry(key, entries, test));
+  BOOST_CHECK(entries[0] == "1");
+  BOOST_CHECK(entries[1] == "2");
+  BOOST_CHECK(entries[2] == "3");
+}
+//---------------------------------------------------------------------------
+
+void testExceptionLogging ()
+{
+  std::invalid_argument e("testing std::invalid_argument");
+
+ /* try
+  {
+    throw e;
+  }
+  catch (const std::exception& e)
+  {     */
+    ostringstream os;
+    os << e;
+    BOOST_CHECK(os.good());
+ /* } */
+}
+//---------------------------------------------------------------------------
+
+void add_StringUtils_tests(test_suite* test)
+{
+  test->add( BOOST_TEST_CASE( &testStringUtils ) );
+  test->add( BOOST_TEST_CASE( &testStripFunction ) );
+  test->add( BOOST_TEST_CASE( &testKeyValue ) );
+  test->add( BOOST_TEST_CASE( &testExceptionLogging ) );
+}
+
+//---------------------------------------------------------------------------
+

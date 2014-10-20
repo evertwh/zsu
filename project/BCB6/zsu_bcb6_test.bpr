@@ -1,0 +1,179 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="bin\zsu_bcb6_test.exe"/>
+    <OBJFILES value="obj\main.obj obj\Week_test.obj obj\init_unit_test_suite.obj 
+      obj\Properties_test.obj obj\TempFile_test.obj obj\test_IPAddress.obj 
+      obj\test_EnumToString.obj obj\Uniquifier_test.obj obj\test_Log.obj 
+      obj\test_StringUtils.obj obj\test_strip.obj obj\test_func.obj 
+      obj\test_Diff.obj"/>
+    <RESFILES value="zsu_bcb6_test.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value="lib\zsu_bcb6.lib"/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi"/>
+    <PATHCPP value=".;..\..\test"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL;USEPACKAGES"/>
+    <MAINSOURCE value="zsu_bcb6_test.bpf"/>
+    <INCLUDEPATH value="&quot;E:\Program Files\Borland\CBuilder6\Bin&quot;;..\..\src;..\..\test;..\..;$(BCB)\boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl;..\..\..\boost_1_31_0"/>
+    <LIBPATH value="&quot;E:\Program Files\Borland\CBuilder6\Bin&quot;;..\..\src;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.;$(BCB)\Boost\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-I..\..\src -I&quot;D:\Program Files\Borland\CBuilder6\Projects&quot; -I..\..\test 
+      -I$(BCB)\include -I$(BCB)\include\vcl -I..\.. -I..\..\..\boost_1_31_0 
+      -src_suffix cpp -D_DEBUG -boa"/>
+    <CFLAG1 value="-Od -P -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWC -tWM -c"/>
+    <PFLAGS value="-N2obj -N0obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-llib -Iobj -D&quot;&quot; -ap -Tpe -x -Gn -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0x32.obj $(PACKAGES) $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="zsu_bcb6_test.res" FORMNAME="" UNITNAME="zsu_bcb6_test.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zsu_bcb6_test.bpf" FORMNAME="" UNITNAME="zsu_bcb6_test" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\main.cpp" FORMNAME="" UNITNAME="main" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\Week_test.cpp" FORMNAME="" UNITNAME="Week_test" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\init_unit_test_suite.cpp" FORMNAME="" UNITNAME="init_unit_test_suite.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\Properties_test.cpp" FORMNAME="" UNITNAME="Properties_test.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\TempFile_test.cpp" FORMNAME="" UNITNAME="TempFile_test.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_IPAddress.cpp" FORMNAME="" UNITNAME="test_IPAddress.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_EnumToString.cpp" FORMNAME="" UNITNAME="test_EnumToString" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="lib\zsu_bcb6.lib" FORMNAME="" UNITNAME="zsu_bcb6.lib" CONTAINERID="LibTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\Uniquifier_test.cpp" FORMNAME="" UNITNAME="Uniquifier_test" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="bin\testZSU.log" FORMNAME="" UNITNAME="testZSU.log" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_Log.cpp" FORMNAME="" UNITNAME="test_Log" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_StringUtils.cpp" FORMNAME="" UNITNAME="test_StringUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_strip.cpp" FORMNAME="" UNITNAME="test_strip" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_func.cpp" FORMNAME="" UNITNAME="test_func" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\test\test_Diff.cpp" FORMNAME="" UNITNAME="test_Diff" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=0
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=
+FileDescription=
+FileVersion=1.0.0.0
+InternalName=
+LegalCopyright=
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[HistoryLists\hlIncludePath]
+Count=12
+Item0=..\..\src;..\..\test;..\..;$(BCB)\boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl;..\..\..\boost_1_31_0
+Item1=..\..\src;..\..\test;..\..;$(BCB)\Boost\boost-1_32;$(BCB)\include;$(BCB)\include\vcl;..\..\..\boost_1_32_0
+Item2=..\..\src;..\..\test;..\..;$(BCB)\include;$(BCB)\include\vcl;..\..\..\boost_1_31_0;$(BCB)\Boost\boost-1_31
+Item3=E:\Program Files\Borland\CBuilder6\Bin;..\..\src;..\..\test;..\..;$(BCB)\Boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl;..\..\..\boost_1_31_0
+Item4=..\..\src;..\..\test;..\..;$(BCB)\Boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl;D:\home\evert\Projects\boost\1_31_0
+Item5=..\..\src;..\..\test;..\..;$(BCB)\Boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl
+Item6=..\..\src;D:\Program Files\Borland\CBuilder6\Projects;..\..\test;$(BCB)\include;$(BCB)\include\vcl;..\..;..\..\..\boost_1_31_0
+Item7=..\..\test;$(BCB)\include;$(BCB)\include\vcl;..\..;..\..\..\boost_1_31_0
+Item8=..\..\test;$(BCB)\include;$(BCB)\include\vcl;..\..\..;..\..\..\..\boost_1_31_0
+Item9=..\..\test;$(BCB)\include;$(BCB)\include\vcl;..\..\zsu;..\..\..\boost_1_31_0
+Item10=$(BCB)\include;$(BCB)\include\vcl;..\..\zsu;..\..\..\boost_1_31_0
+Item11=D:\home\evert\Projects\zsu\test;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=8
+Item0=..\..\src;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.;$(BCB)\Boost\lib
+Item1=E:\Program Files\Borland\CBuilder6\Bin;..\..\src;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.;$(BCB)\Boost\lib
+Item2=..\..\src;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.
+Item3=..\..\src;D:\home\evert\Projects\boost_1_31_0\bin\boost\libs\date_time\build\libboost_date_time.lib\borland\debug\threading-multi;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.
+Item4=..\..\src;D:\Program Files\Borland\CBuilder6\Projects;..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.
+Item5=..\..\test;$(BCB)\lib\obj;$(BCB)\lib;.
+Item6=$(BCB)\lib\obj;$(BCB)\lib;.
+Item7=D:\home\evert\Projects\zsu\test;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=1
+Item0=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=obj
+Item1=.
+
+[HistoryLists\hlFinalOutputDir]
+Count=4
+Item0=bin\
+Item1=bin
+Item2=.\
+Item3=.
+
+[HistoryLists\hIBPIOutputDir]
+Count=2
+Item0=lib
+Item1=.
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+  </IDEOPTIONS>
+</PROJECT>

@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 44;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FCC970918A3AF2100D0C716 /* Borland.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC96FB18A3AF2100D0C716 /* Borland.h */; };
+		0FCC970A18A3AF2100D0C716 /* select_compiler_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC96FC18A3AF2100D0C716 /* select_compiler_config.h */; };
+		0FCC970B18A3AF2100D0C716 /* config.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC96FD18A3AF2100D0C716 /* config.h */; };
+		0FCC970C18A3AF2100D0C716 /* diff.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC96FE18A3AF2100D0C716 /* diff.h */; };
+		0FCC970D18A3AF2100D0C716 /* func.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC96FF18A3AF2100D0C716 /* func.h */; };
+		0FCC970E18A3AF2100D0C716 /* IPAddress.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970018A3AF2100D0C716 /* IPAddress.h */; };
+		0FCC970F18A3AF2100D0C716 /* Log.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970118A3AF2100D0C716 /* Log.h */; };
+		0FCC971018A3AF2100D0C716 /* Properties.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970218A3AF2100D0C716 /* Properties.h */; };
+		0FCC971118A3AF2100D0C716 /* StringUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970318A3AF2100D0C716 /* StringUtils.h */; };
+		0FCC971218A3AF2100D0C716 /* strip.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970418A3AF2100D0C716 /* strip.h */; };
+		0FCC971318A3AF2100D0C716 /* TempFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970518A3AF2100D0C716 /* TempFile.h */; };
+		0FCC971418A3AF2100D0C716 /* UIMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970618A3AF2100D0C716 /* UIMapper.h */; };
+		0FCC971518A3AF2100D0C716 /* Uniquifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970718A3AF2100D0C716 /* Uniquifier.h */; };
+		0FCC971618A3AF2100D0C716 /* Week.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FCC970818A3AF2100D0C716 /* Week.h */; };
+		50149BDA09E781A5002DEE6A /* zsu.h in Headers */ = {isa = PBXBuildFile; fileRef = 50149BD909E781A5002DEE6A /* zsu.h */; };
+		5073E0CB09E734E500EC74B6 /* zsu.cp in Sources */ = {isa = PBXBuildFile; fileRef = 5073E0C409E734A800EC74B6 /* zsu.cp */; };
+		D2AAC0B105546B7500DB518D /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08FB77AAFE841565C02AAC07 /* Carbon.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		08FB77AAFE841565C02AAC07 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		0FCC96FB18A3AF2100D0C716 /* Borland.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Borland.h; sourceTree = "<group>"; };
+		0FCC96FC18A3AF2100D0C716 /* select_compiler_config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = select_compiler_config.h; sourceTree = "<group>"; };
+		0FCC96FD18A3AF2100D0C716 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		0FCC96FE18A3AF2100D0C716 /* diff.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = diff.h; sourceTree = "<group>"; };
+		0FCC96FF18A3AF2100D0C716 /* func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = func.h; sourceTree = "<group>"; };
+		0FCC970018A3AF2100D0C716 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPAddress.h; sourceTree = "<group>"; };
+		0FCC970118A3AF2100D0C716 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
+		0FCC970218A3AF2100D0C716 /* Properties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Properties.h; sourceTree = "<group>"; };
+		0FCC970318A3AF2100D0C716 /* StringUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringUtils.h; sourceTree = "<group>"; };
+		0FCC970418A3AF2100D0C716 /* strip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strip.h; sourceTree = "<group>"; };
+		0FCC970518A3AF2100D0C716 /* TempFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempFile.h; sourceTree = "<group>"; };
+		0FCC970618A3AF2100D0C716 /* UIMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIMapper.h; sourceTree = "<group>"; };
+		0FCC970718A3AF2100D0C716 /* Uniquifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uniquifier.h; sourceTree = "<group>"; };
+		0FCC970818A3AF2100D0C716 /* Week.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Week.h; sourceTree = "<group>"; };
+		32BAE0B70371A74B00C91783 /* zsu_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zsu_Prefix.pch; sourceTree = "<group>"; };
+		50149BD909E781A5002DEE6A /* zsu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zsu.h; sourceTree = "<group>"; };
+		5073E0C409E734A800EC74B6 /* zsu.cp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = zsu.cp; sourceTree = "<group>"; };
+		5073E0C609E734A800EC74B6 /* zsuProj.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = zsuProj.xcconfig; sourceTree = "<group>"; };
+		5073E0C709E734A800EC74B6 /* zsuTarget.xcconfig */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.xcconfig; path = zsuTarget.xcconfig; sourceTree = "<group>"; };
+		50B2938909F016FC00694E55 /* zsuPriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zsuPriv.h; sourceTree = "<group>"; };
+		C1C23D4D0F28AC9C00BE9A6A /* src */ = {isa = PBXFileReference; lastKnownFileType = folder; name = src; path = ../../../src; sourceTree = SOURCE_ROOT; };
+		D2AAC09D05546B4700DB518D /* libzsu.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libzsu.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2AAC09B05546B4700DB518D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2AAC0B105546B7500DB518D /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		034768DDFF38A45A11DB9C8B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D2AAC09D05546B4700DB518D /* libzsu.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0867D691FE84028FC02AAC07 /* zsu */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC96F818A3AF2100D0C716 /* zsu */,
+				5073E0CA09E734BC00EC74B6 /* Configuration Files */,
+				08FB77ACFE841707C02AAC07 /* Source */,
+				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
+				034768DDFF38A45A11DB9C8B /* Products */,
+			);
+			name = zsu;
+			sourceTree = "<group>";
+		};
+		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				08FB77AAFE841565C02AAC07 /* Carbon.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<group>";
+		};
+		08FB77ACFE841707C02AAC07 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C1C23D4D0F28AC9C00BE9A6A /* src */,
+				32BAE0B70371A74B00C91783 /* zsu_Prefix.pch */,
+				50149BD909E781A5002DEE6A /* zsu.h */,
+				50B2938909F016FC00694E55 /* zsuPriv.h */,
+				5073E0C409E734A800EC74B6 /* zsu.cp */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		0FCC96F818A3AF2100D0C716 /* zsu */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC96F918A3AF2100D0C716 /* config */,
+				0FCC96FD18A3AF2100D0C716 /* config.h */,
+				0FCC96FE18A3AF2100D0C716 /* diff.h */,
+				0FCC96FF18A3AF2100D0C716 /* func.h */,
+				0FCC970018A3AF2100D0C716 /* IPAddress.h */,
+				0FCC970118A3AF2100D0C716 /* Log.h */,
+				0FCC970218A3AF2100D0C716 /* Properties.h */,
+				0FCC970318A3AF2100D0C716 /* StringUtils.h */,
+				0FCC970418A3AF2100D0C716 /* strip.h */,
+				0FCC970518A3AF2100D0C716 /* TempFile.h */,
+				0FCC970618A3AF2100D0C716 /* UIMapper.h */,
+				0FCC970718A3AF2100D0C716 /* Uniquifier.h */,
+				0FCC970818A3AF2100D0C716 /* Week.h */,
+			);
+			name = zsu;
+			path = ../../../zsu;
+			sourceTree = "<group>";
+		};
+		0FCC96F918A3AF2100D0C716 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC96FA18A3AF2100D0C716 /* compiler */,
+				0FCC96FC18A3AF2100D0C716 /* select_compiler_config.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		0FCC96FA18A3AF2100D0C716 /* compiler */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC96FB18A3AF2100D0C716 /* Borland.h */,
+			);
+			path = compiler;
+			sourceTree = "<group>";
+		};
+		5073E0CA09E734BC00EC74B6 /* Configuration Files */ = {
+			isa = PBXGroup;
+			children = (
+				5073E0C609E734A800EC74B6 /* zsuProj.xcconfig */,
+				5073E0C709E734A800EC74B6 /* zsuTarget.xcconfig */,
+			);
+			name = "Configuration Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D2AAC09905546B4700DB518D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FCC971618A3AF2100D0C716 /* Week.h in Headers */,
+				0FCC970C18A3AF2100D0C716 /* diff.h in Headers */,
+				0FCC971518A3AF2100D0C716 /* Uniquifier.h in Headers */,
+				0FCC971118A3AF2100D0C716 /* StringUtils.h in Headers */,
+				0FCC971418A3AF2100D0C716 /* UIMapper.h in Headers */,
+				0FCC970B18A3AF2100D0C716 /* config.h in Headers */,
+				0FCC970A18A3AF2100D0C716 /* select_compiler_config.h in Headers */,
+				50149BDA09E781A5002DEE6A /* zsu.h in Headers */,
+				0FCC971018A3AF2100D0C716 /* Properties.h in Headers */,
+				0FCC971318A3AF2100D0C716 /* TempFile.h in Headers */,
+				0FCC970D18A3AF2100D0C716 /* func.h in Headers */,
+				0FCC970F18A3AF2100D0C716 /* Log.h in Headers */,
+				0FCC970918A3AF2100D0C716 /* Borland.h in Headers */,
+				0FCC971218A3AF2100D0C716 /* strip.h in Headers */,
+				0FCC970E18A3AF2100D0C716 /* IPAddress.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D2AAC09C05546B4700DB518D /* zsu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1DEB916008733D950010E9CD /* Build configuration list for PBXNativeTarget "zsu" */;
+			buildPhases = (
+				D2AAC09905546B4700DB518D /* Headers */,
+				D2AAC09B05546B4700DB518D /* Frameworks */,
+				D2AAC09A05546B4700DB518D /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zsu;
+			productName = libzsu;
+			productReference = D2AAC09D05546B4700DB518D /* libzsu.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0867D690FE84028FC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+			};
+			buildConfigurationList = 1DEB916408733D950010E9CD /* Build configuration list for PBXProject "zsu" */;
+			compatibilityVersion = "Xcode 3.0";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0867D691FE84028FC02AAC07 /* zsu */;
+			productRefGroup = 034768DDFF38A45A11DB9C8B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D2AAC09C05546B4700DB518D /* zsu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2AAC09A05546B4700DB518D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5073E0CB09E734E500EC74B6 /* zsu.cp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB916108733D950010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5073E0C709E734A800EC74B6 /* zsuTarget.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = zsu_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"_GLIBCXX_DEBUG=1",
+					"_GLIBCXX_DEBUG_PEDANTIC=1",
+				);
+				ZERO_LINK = YES;
+			};
+			name = Debug;
+		};
+		1DEB916208733D950010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5073E0C709E734A800EC74B6 /* zsuTarget.xcconfig */;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = zsu_Prefix.pch;
+				STRIP_INSTALLED_PRODUCT = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
+		1DEB916508733D950010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5073E0C609E734A800EC74B6 /* zsuProj.xcconfig */;
+			buildSettings = {
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Debug;
+		};
+		1DEB916608733D950010E9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5073E0C609E734A800EC74B6 /* zsuProj.xcconfig */;
+			buildSettings = {
+				ARCHS = (
+					ppc,
+					i386,
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				PREBINDING = NO;
+				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB916008733D950010E9CD /* Build configuration list for PBXNativeTarget "zsu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB916108733D950010E9CD /* Debug */,
+				1DEB916208733D950010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1DEB916408733D950010E9CD /* Build configuration list for PBXProject "zsu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB916508733D950010E9CD /* Debug */,
+				1DEB916608733D950010E9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0867D690FE84028FC02AAC07 /* Project object */;
+}

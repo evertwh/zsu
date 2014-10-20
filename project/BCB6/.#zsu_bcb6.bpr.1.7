@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!-- C++Builder XML Project -->
+<PROJECT>
+  <MACROS>
+    <VERSION value="BCB.06.00"/>
+    <PROJECT value="bin\zsu_bcb6.dll"/>
+    <OBJFILES value="obj\libmain.obj obj\IPAddress.obj obj\Log.obj obj\Properties.obj 
+      obj\TempFile.obj obj\Week.obj obj\StringUtils.obj"/>
+    <RESFILES value="zsu_bcb6.res"/>
+    <IDLFILES value=""/>
+    <IDLGENFILES value=""/>
+    <DEFFILE value=""/>
+    <RESDEPEN value="$(RESFILES)"/>
+    <LIBFILES value=""/>
+    <LIBRARIES value=""/>
+    <SPARELIBS value=""/>
+    <PACKAGES value="vcl.bpi rtl.bpi dbrtl.bpi adortl.bpi vcldb.bpi vclx.bpi bdertl.bpi 
+      vcldbx.bpi ibxpress.bpi dsnap.bpi cds.bpi bdecds.bpi qrpt.bpi teeui.bpi 
+      teedb.bpi tee.bpi dss.bpi teeqr.bpi visualclx.bpi visualdbclx.bpi 
+      dsnapcrba.bpi dsnapcon.bpi bcbsmp.bpi vclie.bpi xmlrtl.bpi inet.bpi 
+      inetdbbde.bpi inetdbxpress.bpi inetdb.bpi nmfast.bpi webdsnap.bpi 
+      bcbie.bpi websnap.bpi soaprtl.bpi dclocx.bpi dbexpress.bpi dbxcds.bpi 
+      indy.bpi bcb2kaxserver.bpi"/>
+    <PATHCPP value=".;..\..\src"/>
+    <PATHPAS value=".;"/>
+    <PATHRC value=".;"/>
+    <PATHASM value=".;"/>
+    <DEBUGLIBPATH value="$(BCB)\lib\debug"/>
+    <RELEASELIBPATH value="$(BCB)\lib\release"/>
+    <LINKER value="ilink32"/>
+    <USERDEFINES value="_DEBUG;ZSU_DLL_PROJECT"/>
+    <SYSDEFINES value="NO_STRICT;_NO_VCL;_RTLDLL"/>
+    <MAINSOURCE value="zsu_bcb6.bpf"/>
+    <INCLUDEPATH value="..\..\test;..\..\src;..\..;$(BCB)\Boost\include\boost-1_32;$(BCB)\include;$(BCB)\include\vcl"/>
+    <LIBPATH value="..\..\test;..\..\src;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Boost\lib"/>
+    <WARNINGS value="-w-par"/>
+    <OTHERFILES value=""/>
+  </MACROS>
+  <OPTIONS>
+    <IDLCFLAGS value="-src_suffix cpp -D_DEBUG -DZSU_DLL_PROJECT -I..\..\src 
+      -I..\..\..\boost_1_31_0 -I..\.. -I$(BCB)\include -I$(BCB)\include\vcl -boa"/>
+    <CFLAG1 value="-WD -Od -P -Vx -Ve -X- -r- -a8 -b- -k -y -v -vi- -tWD -tWM -c"/>
+    <PFLAGS value="-N2obj -N0obj -$YD -$W -$O- -$A8 -v -JPHNE -M"/>
+    <RFLAGS value=""/>
+    <AFLAGS value="/mx /w2 /zd"/>
+    <LFLAGS value="-llib -Iobj -D&quot;&quot; -aa -Tpd -x -Gn -Gi -v"/>
+    <OTHERFILES value=""/>
+  </OPTIONS>
+  <LINKER>
+    <ALLOBJ value="c0d32.obj $(OBJFILES)"/>
+    <ALLRES value="$(RESFILES)"/>
+    <ALLLIB value="$(LIBFILES) $(LIBRARIES) import32.lib cw32mti.lib"/>
+    <OTHERFILES value=""/>
+  </LINKER>
+  <FILELIST>
+      <FILE FILENAME="zsu_bcb6.res" FORMNAME="" UNITNAME="zsu_bcb6.res" CONTAINERID="ResTool" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="zsu_bcb6.bpf" FORMNAME="" UNITNAME="zsu_bcb6" CONTAINERID="BPF" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="libmain.cpp" FORMNAME="" UNITNAME="libmain" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\IPAddress.cpp" FORMNAME="" UNITNAME="IPAddress.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\Log.cpp" FORMNAME="" UNITNAME="Log.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\Properties.cpp" FORMNAME="" UNITNAME="Properties.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\TempFile.cpp" FORMNAME="" UNITNAME="TempFile.cpp" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\IPAddress.h" FORMNAME="" UNITNAME="IPAddress.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\Log.h" FORMNAME="" UNITNAME="Log.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\Properties.h" FORMNAME="" UNITNAME="Properties.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\TempFile.h" FORMNAME="" UNITNAME="TempFile.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\Uniquifier.h" FORMNAME="" UNITNAME="Uniquifier.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\Week.cpp" FORMNAME="" UNITNAME="Week" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\Week.h" FORMNAME="" UNITNAME="Week.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\UIMapper.h" FORMNAME="" UNITNAME="UIMapper.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\src\StringUtils.cpp" FORMNAME="" UNITNAME="StringUtils" CONTAINERID="CCompiler" DESIGNCLASS="" LOCALCOMMAND=""/>
+      <FILE FILENAME="..\..\zsu\StringUtils.h" FORMNAME="" UNITNAME="StringUtils.h" CONTAINERID="" DESIGNCLASS="" LOCALCOMMAND=""/>
+  </FILELIST>
+  <BUILDTOOLS>
+  </BUILDTOOLS>
+
+  <IDEOPTIONS>
+[Version Info]
+IncludeVerInfo=1
+AutoIncBuild=0
+MajorVer=1
+MinorVer=0
+Release=0
+Build=0
+Debug=0
+PreRelease=0
+Special=0
+Private=0
+DLL=0
+Locale=1033
+CodePage=1252
+
+[Version Info Keys]
+CompanyName=Zukke Spijkers BV
+FileDescription=zsu
+FileVersion=1.0.0.0
+InternalName=zsu
+LegalCopyright=Copyright (c) Zukke Spijkers BV 2003 - 2004
+LegalTrademarks=
+OriginalFilename=
+ProductName=
+ProductVersion=1.0.0.0
+Comments=
+
+[Excluded Packages]
+D:\PVSW\sdk\pdac\BCB6\lib\pc200d65.bpl=Pervasive Data Access Components (Common Classes)
+D:\PVSW\sdk\pdac\BCB6\lib\pb200d65.bpl=Pervasive Data Access Components for Btrieve
+D:\PVSW\sdk\pdac\BCB6\lib\ps200d65.bpl=Pervasive Data Access Components for P.SQL
+
+[HistoryLists\hlIncludePath]
+Count=9
+Item0=..\..\test;..\..\src;..\..;$(BCB)\Boost\include\boost-1_32;$(BCB)\include;$(BCB)\include\vcl
+Item1=E:\Program Files\Borland\CBuilder6\Projects;..\..\test;..\..\src;..\..;$(BCB)\Boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl
+Item2=..\..\src;..\..;$(BCB)\Boost\include\boost-1_31;$(BCB)\include;$(BCB)\include\vcl
+Item3=..\..\src;..\..\..\boost_1_31_0;..\..;$(BCB)\include;$(BCB)\include\vcl
+Item4=..\..\..\boost_1_31_0;..\..;$(BCB)\include;$(BCB)\include\vcl
+Item5=..\..\src;..\..;$(BCB)\include;$(BCB)\include\vcl;D:\home\evert\Projects\boost_1_31_0
+Item6=..\..\;$(BCB)\include;$(BCB)\include\vcl;D:\home\evert\Projects\boost_1_31_0
+Item7=..\..\src;..\..\zsu;$(BCB)\include;$(BCB)\include\vcl;D:\home\evert\Projects\boost_1_31_0
+Item8=..\..\src;..\..\zsu;D:\home\evert\Projects\zsu\project\BCB6;$(BCB)\include;$(BCB)\include\vcl
+
+[HistoryLists\hlLibraryPath]
+Count=7
+Item0=..\..\test;..\..\src;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Boost\lib
+Item1=E:\Program Files\Borland\CBuilder6\Projects;..\..\test;..\..\src;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Boost\lib
+Item2=..\..\src;$(BCB)\lib\obj;$(BCB)\lib;$(BCB)\Boost\lib
+Item3=..\..\src;$(BCB)\lib\obj;$(BCB)\lib
+Item4=..\..\src;$(BCB)\lib\obj;$(BCB)\lib;D:\home\evert\Projects\boost_1_31_0\bin\boost\libs\date_time\build\libboost_date_time.lib\borland\debug\threading-multi
+Item5=..\..\src;..\..\zsu;$(BCB)\lib\obj;$(BCB)\lib
+Item6=..\..\src;..\..\zsu;D:\home\evert\Projects\zsu\project\BCB6;$(BCB)\lib\obj;$(BCB)\lib
+
+[HistoryLists\hlDebugSourcePath]
+Count=1
+Item0=$(BCB)\source\vcl
+
+[HistoryLists\hlConditionals]
+Count=2
+Item0=_DEBUG;ZSU_DLL_PROJECT
+Item1=_DEBUG
+
+[HistoryLists\hlIntOutputDir]
+Count=2
+Item0=obj
+Item1=.
+
+[HistoryLists\hlFinalOutputDir]
+Count=4
+Item0=bin\
+Item1=bin
+Item2=.\
+Item3=.
+
+[HistoryLists\hIBPIOutputDir]
+Count=2
+Item0=lib
+Item1=.
+
+[Debugging]
+DebugSourceDirs=$(BCB)\source\vcl
+
+[Parameters]
+RunParams=
+Launcher=
+UseLauncher=0
+DebugCWD=
+HostApplication=D:\home\evert\Projects\zsu\project\BCB6\bin\zsu_bcb6_test.exe
+RemoteHost=
+RemotePath=
+RemoteLauncher=
+RemoteCWD=
+RemoteDebug=0
+
+[Compiler]
+ShowInfoMsgs=0
+LinkDebugVcl=0
+LinkCGLIB=0
+
+[Language]
+ActiveLang=
+ProjectLang=
+RootDir=
+
+[Linker]
+LibPrefix=
+LibSuffix=
+LibVersion=
+  </IDEOPTIONS>
+</PROJECT>

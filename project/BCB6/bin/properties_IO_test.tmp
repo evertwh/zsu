@@ -1,0 +1,4 @@
+name=pipo
+foo=bar
+cmd=foo=bar
+tab=\t
